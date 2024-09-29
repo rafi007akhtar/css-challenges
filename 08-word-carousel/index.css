@@ -1,0 +1,47 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  --bg-word: #5134ff;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlighted-word {
+  background-color: var(--bg-word);
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.highlighted-word::before {
+  content: "coding";
+  animation: rotateWord 5s linear infinite;
+}
+
+@keyframes rotateWord {
+  0% {
+    content: "coding";
+  }
+  25% {
+    content: "reading";
+  }
+  50% {
+    content: "DC";
+  }
+  75% {
+    content: "walking";
+  }
+  100% {
+    content: "coding";
+  }
+}
