@@ -1,0 +1,35 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue: #0269a6;
+  --yellow: #fecc00;
+  --flag-height: 150px;
+}
+
+.flag {
+  width: calc(var(--flag-height) * 8 / 5);
+  height: var(--flag-height);
+  background-color: var(--blue);
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.stripe {
+  background-color: var(--yellow);
+}
+
+.stripe-yellow {
+  grid-column: 1 / 17;
+  grid-row: 5 / 7;
+}
+
+.stripe-yellow2 {
+  grid-column: 6 / 8;
+  grid-row: 1 / 11;
+}
