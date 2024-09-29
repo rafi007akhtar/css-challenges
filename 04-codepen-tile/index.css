@@ -1,0 +1,87 @@
+/* Colors 
+body background: #131417
+tile background: #1e1f26 
+username: #b7bbc8
+card stats background: #131417
+*/
+
+:root {
+  --font-main: "Noto Sans", sans-serif;
+  --bg-main: #131417;
+  --bg-card: #1e1f26;
+  --bg-stats: #131417;
+  --username: #b7bbc8;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  font-family: var(--font-main);
+}
+
+.card {
+  max-width: 400px;
+  background-color: var(--bg-card);
+  margin: auto;
+  padding-bottom: 12px;
+  border-radius: 8px;
+}
+
+.card-thumbnail {
+  display: flex;
+  justify-content: center;
+}
+
+.card-thumbnail img {
+  width: 90%;
+  max-width: 350px;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.card-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-avatar img {
+  width: 4rem;
+  margin-left: 26px;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+}
+
+.card-details {
+  color: var(--username);
+  line-height: 0.5;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.card-details p {
+  font-weight: 500;
+  color: darkgray;
+}
+
+.card-stats {
+  color: var(--username);
+  list-style-type: none;
+  justify-content: flex-start;
+  margin-left: 18px;
+  padding-inline-start: 0;
+  margin-block-end: 0;
+  display: none;
+}
+
+.card:hover .card-stats {
+  display: flex;
+}
+
+.card-stats li {
+  background-color: var(--bg-stats);
+  margin-left: 8px;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
