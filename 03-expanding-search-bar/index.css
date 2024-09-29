@@ -1,0 +1,38 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --search-border: #bbb;
+  --search-focus-border: #3a71ca;
+}
+
+.container {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+
+.container .search-bar {
+  width: 33%;
+  border: 1px solid var(--search-border);
+  padding: 8px 2px;
+  border-radius: 4px;
+  transition: all 400ms ease-in;
+  outline: none;
+}
+
+.container .search-bar:focus,
+.container .search-bar:focus-visible {
+  width: 100%;
+  border: 1px solid var(--search-focus-border);
+}
+.container .search-bar:focus::placeholder {
+  color: transparent;
+}
+
+.container .search-label {
+  display: none;
+}

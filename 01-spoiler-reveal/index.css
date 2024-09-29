@@ -1,0 +1,41 @@
+p {
+  line-height: 1.5em;
+}
+
+.post {
+  background-color: #eae8ed;
+  margin: 0 4px 20px 4px;
+  font-family: sans-serif;
+  font-weight: 500;
+  padding: 10px 10px 10px 10px;
+  border-radius: 1rem;
+  color: black;
+}
+
+.spoiler {
+  background-color: black;
+  animation: hide 700ms ease-in-out both;
+}
+
+.spoiler:hover {
+  cursor: pointer;
+  animation: reveal 700ms ease-in-out both;
+}
+
+@keyframes reveal {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: unset;
+  }
+}
+
+@keyframes hide {
+  0% {
+    background-color: unset;
+  }
+  100% {
+    background-color: black;
+  }
+}
