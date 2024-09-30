@@ -1,0 +1,56 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #c6c8dd;
+}
+
+:root {
+  --toggle-switch-bg: #232428;
+  --toggle-border: #232428;
+  --toggle-bg: #fff;
+  --circle-size: 20px;
+  --toggle-width: 6rem;
+}
+
+.toggle-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-wrap label {
+  border: 3px solid var(--toggle-border);
+  background-color: var(--toggle-bg);
+  width: var(--toggle-width);
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.toggle-switch {
+  width: var(--circle-size);
+  height: var(--circle-size);
+  background-color: var(--toggle-switch-bg);
+  border-radius: 50%;
+  position: relative;
+  left: 0;
+}
+
+.toggle-input:checked + .toggle-switch {
+  left: calc(var(--toggle-width) - var(--circle-size));
+  transition: all 300ms linear;
+}
+
+.toggle-input:not(:checked) + .toggle-switch {
+  left: 0;
+  transition: all 300ms linear;
+}
