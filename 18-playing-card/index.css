@@ -1,0 +1,52 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  --card-height: 200px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: calc(var(--card-height) * 2 / 3);
+  height: var(--card-height);
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.top,
+.bottom,
+.center {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.center {
+  text-align: center;
+}
+.bottom {
+  text-align: right;
+  transform: rotateX(180deg);
+}
+
+.top .spade,
+.bottom .spade {
+  font-size: 2rem;
+}
+
+.center.spade {
+  font-size: 4rem;
+}
